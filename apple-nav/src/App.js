@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Home from './pages/Home'
 import Mac from './pages/Mac'
-import { Iphone, Ipad, Watch, Tv, NoMatch } from './pages/Pages'
+import { Iphone, Ipad, Watch, Tv, NoMatch as ErrorPage } from './pages/Pages'
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
           <Route path="/ipad" exact component={Ipad} />
           <Route path="/watch" exact component={Watch} />
           <Route path="/tv" exact component={Tv} />
-          <Route component={NoMatch} />
+          <Route component={ErrorPage} />
         </Switch>
       </div>
     );
